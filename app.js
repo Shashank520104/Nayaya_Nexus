@@ -27,6 +27,23 @@ app.use(express.urlencoded({ extended: true, limit: '2mb' }));
 
 // Static Assets
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/css', express.static(path.join(__dirname, 'public/css')));
+app.use('/js', express.static(path.join(__dirname, 'public/js')));
+
+// Static Fallback Handlers (Guarantees CSS & JS delivery in serverless environments)
+app.get('/css/:filename', (req, res, next) => {
+  const filePath = path.join(__dirname, 'public', 'css', req.params.filename);
+  res.sendFile(filePath, (err) => {
+    if (err) next();
+  });
+});
+
+app.get('/js/:filename', (req, res, next) => {
+  const filePath = path.join(__dirname, 'public', 'js', req.params.filename);
+  res.sendFile(filePath, (err) => {
+    if (err) next();
+  });
+});
 
 // Global View Context
 app.use((req, res, next) => {
