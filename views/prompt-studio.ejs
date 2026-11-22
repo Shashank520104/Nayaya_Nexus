@@ -1,0 +1,272 @@
+<%- include('partials/head', { title: 'Prompt Engineering & Refinement Studio – NyayaNexus' }) %>
+<%- include('partials/navbar') %>
+
+<main class="studio-page-main">
+  <!-- Top Hero Header -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-badge">
+        <i class="fa-solid fa-microscope"></i> Prompt Engineering & AI Safety Research
+      </div>
+      <h1 class="page-title">Prompt Engineering & Refinement Studio</h1>
+      <p class="page-subtitle">
+        Designing and refining prompts to help AI understand multilingual Indian vernaculars, simplify legal statutes, explain welfare schemes, and minimize legal hallucinations.
+      </p>
+
+      <div class="research-team-pill">
+        <span>Research & Architecture by:</span>
+        <strong>Shashank</strong> (Backend & Orchestration) &bull; 
+        <strong>Shubh</strong> (Prompt Grounding & BNS Corpus) &bull; 
+        <strong>Ashutosh</strong> (Indic UX & Frontend)
+      </div>
+    </div>
+  </section>
+
+  <!-- Prompt Layer Architecture Visualization -->
+  <section class="section prompt-architecture-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Methodology</span>
+        <h2 class="section-title">The NyayaNexus 4-Layer Prompt Architecture</h2>
+        <p class="section-desc">
+          How raw, ambiguous citizen queries are transformed into legally grounded, empathetic, and safe guidance.
+        </p>
+      </div>
+
+      <div class="arch-pipeline-grid">
+        <!-- Stage 1 -->
+        <div class="pipeline-step-card">
+          <div class="step-badge">Layer 1</div>
+          <div class="step-icon"><i class="fa-solid fa-language"></i></div>
+          <h3>Multilingual Normalization</h3>
+          <p>
+            Detects Indic scripts (Devanagari, Bengali, Telugu, Tamil, etc.) and colloquial Hinglish. Maps colloquial slang to verified legal intents without loss of cultural nuance.
+          </p>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="pipeline-step-card">
+          <div class="step-badge">Layer 2</div>
+          <div class="step-icon"><i class="fa-solid fa-book-atlas"></i></div>
+          <h3>Statutory Grounding Injection</h3>
+          <p>
+            Retrieves verified sections from the BNS 2023, BNSS, Consumer Protection Act 2019, and RTI Act. Binds the context to prevent the LLM from fabricating fictional section numbers.
+          </p>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="pipeline-step-card">
+          <div class="step-badge">Layer 3</div>
+          <div class="step-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Guardrail Enforcement</h3>
+          <p>
+            Applies G-01 Bar Council Rule 36 disclaimers, G-02 BNS/IPC dual mapping, and G-03 Cyber Fraud Golden Hour 1930 triage whenever financial damage is detected.
+          </p>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="pipeline-step-card">
+          <div class="step-badge">Layer 4</div>
+          <div class="step-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3>Empathetic Simplification</h3>
+          <p>
+            Instructs the model to explain legal technicalities in plain conversational language, concluding with step-by-step citizen action items and official portal links.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Side-by-Side Prompt Comparison Benchmark -->
+  <section class="section comparison-section" id="comparisons">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Empirical Verification</span>
+        <h2 class="section-title">Live Prompt Evaluation: Raw vs Refined Prompt</h2>
+        <p class="section-desc">
+          Compare how standard unprompted LLMs fail in legal safety versus how the NyayaNexus refined prompt pipeline delivers verified, actionable guidance.
+        </p>
+      </div>
+
+      <!-- Preset Query Picker -->
+      <div class="comparison-preset-bar">
+        <label><strong>Select Case Study:</strong></label>
+        <div class="preset-buttons">
+          <button type="button" class="btn-preset active" data-id="comp-1">
+            <i class="fa-solid fa-shield"></i> Case 1: Police refusing FIR (Hindi)
+          </button>
+          <button type="button" class="btn-preset" data-id="comp-2">
+            <i class="fa-solid fa-triangle-exclamation"></i> Case 2: UPI Fraud Golden Hour (English)
+          </button>
+        </div>
+      </div>
+
+      <!-- Comparison Split Screen -->
+      <div class="comparison-cards-grid" id="comparisonDisplayBox">
+        <!-- Left: Raw Unprompted LLM -->
+        <div class="comp-card raw-card">
+          <div class="comp-card-header">
+            <div class="comp-tag-raw">
+              <i class="fa-solid fa-circle-xmark"></i> Naive / Raw Prompt
+            </div>
+            <h4>Standard Zero-Shot LLM</h4>
+          </div>
+
+          <div class="comp-query-box">
+            <span class="box-label">User Query:</span>
+            <p class="query-content" id="rawQueryText">पुलिस मेरी चोरी की शिकायत दर्ज नहीं कर रही है, कह रहे हैं कि हमारे इलाके का मामला नहीं है। क्या करूँ?</p>
+          </div>
+
+          <div class="comp-output-box">
+            <span class="box-label">Model Output:</span>
+            <div class="output-content" id="rawOutputText">
+              आप पुलिस स्टेशन के बड़े अफसर से बात कर सकते हैं। अगर वे ना मानें तो वकील करें और कोर्ट जाएं। पुलिस को आपकी रिपोर्ट लिखनी चाहिए।
+            </div>
+          </div>
+
+          <div class="comp-critique-box critique-danger">
+            <h5><i class="fa-solid fa-triangle-exclamation"></i> Critical Deficiencies & Safety Failures:</h5>
+            <ul id="rawWeaknessList">
+              <li>Lacks statutory citation grounding (fails to mention Zero FIR under Section 173 BNSS / 154 CrPC).</li>
+              <li>Fails to give actionable 3-step escalation (SP registered post & 175(3) Magistrate remedy).</li>
+              <li>No Bar Council Rule 36 disclaimer; fails to inform citizen of NALSA 15100 free legal counsel.</li>
+              <li>High risk of user being turned away repeatedly at police stations.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: NyayaNexus Refined Prompt -->
+        <div class="comp-card refined-card">
+          <div class="comp-card-header">
+            <div class="comp-tag-refined">
+              <i class="fa-solid fa-circle-check"></i> NyayaNexus Refined Prompt
+            </div>
+            <h4>Grounded, Layered Prompt Pipeline</h4>
+          </div>
+
+          <div class="comp-query-box">
+            <span class="box-label">Grounded Context Injected:</span>
+            <p class="query-content context-highlight" id="refinedContextText">Section 173 BNSS (Zero FIR), Section 175(3) BNSS, SP Registered Post Escalation, NALSA Helpline 15100.</p>
+          </div>
+
+          <div class="comp-output-box">
+            <span class="box-label">Model Output:</span>
+            <div class="output-content" id="refinedOutputText">
+              पुलिस का यह कहना कि 'मामला हमारे इलाके का नहीं है', कानूनी तौर पर गलत है। आपके पास निम्नलिखित स्पष्ट अधिकार हैं:
+
+1. जीरो एफआईआर (Zero FIR) का अधिकार:
+कानून (BNSS 2023 की धारा 173 / पूर्व CrPC 154) के तहत यदि संज्ञेय अपराध (चोरी/धोखाधड़ी) हुआ है, तो कोई भी पुलिस थाना 'क्षेत्राधिकार न होने' का बहाना बनाकर रिपोर्ट दर्ज करने से मना नहीं कर सकता। वे तुरंत Zero FIR दर्ज करेंगे और बाद में संबंधित थाने को स्थानांतरित करेंगे।
+
+2. यदि थाना प्रभारी फिर भी मना करे (कदम-दर-कदम प्रक्रिया):
+- कदम 1: पुलिस अधीक्षक (SP / DCP) को लिखित शिकायत पंजीकृत डाक द्वारा भेजें।
+- कदम 2: 112 डायल करें और मौके से कॉल रिकॉर्डिंग या शिकायत संख्या नोट करें।
+- कदम 3: यदि SP भी कार्रवाई न करे, तो न्यायिक मजिस्ट्रेट के समक्ष BNSS की धारा 175(3) (पूर्व CrPC 156(3)) के तहत अर्जी लगाएं। मजिस्ट्रेट पुलिस को FIR दर्ज कर जांच का सीधा आदेश दे सकते हैं।
+
+3. मुफ्त कानूनी मदद:
+यदि वकील की फीस नहीं दे सकते, तो 15100 डायल करें (राष्ट्रीय कानूनी सेवा प्राधिकरण - NALSA) जहां मुफ्त सरकारी वकील मिलता है।
+
+(सूचनात्मक मार्गदर्शन: यह कानूनी जागरूकता हेतु है, औपचारिक अदालती सलाह नहीं।)
+            </div>
+          </div>
+
+          <div class="comp-critique-box critique-success">
+            <h5><i class="fa-solid fa-star"></i> Prompt Refinement Breakthroughs:</h5>
+            <ul id="refinedImprovementsList">
+              <li>Cites Zero FIR statute; gives sequential 3-step escalation.</li>
+              <li>Mentions both new BNSS 2023 and historical CrPC sections to prevent citizen confusion.</li>
+              <li>Includes free legal aid helpline 15100 for underprivileged citizens.</li>
+              <li>Strict Bar Council Rule 36 disclaimer appended automatically.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Custom Test Runner -->
+      <div class="custom-prompt-tester">
+        <div class="tester-header">
+          <i class="fa-solid fa-flask-vial"></i>
+          <h4>Test Your Own Query in the Prompt Studio</h4>
+        </div>
+        <form id="customCompareForm" class="tester-form">
+          <div class="form-row">
+            <input 
+              type="text" 
+              id="customTestInput" 
+              class="tester-input" 
+              placeholder="Type any legal query to test (e.g. Can police arrest a woman at 10 PM without female officer?)..." 
+              required
+            >
+            <button type="submit" class="btn-primary tester-btn" id="runTestBtn">
+              <i class="fa-solid fa-play"></i> Run Live Comparison
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Active Guardrails Matrix -->
+  <section class="section guardrails-section" id="guardrails">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Safety Protocols</span>
+        <h2 class="section-title">Active Anti-Hallucination Guardrails Matrix</h2>
+        <p class="section-desc">
+          Automated checks applied during inference to maintain strict fidelity to Indian jurisprudence.
+        </p>
+      </div>
+
+      <div class="guardrails-table-wrapper">
+        <table class="guardrail-table">
+          <thead>
+            <tr>
+              <th>Rule ID</th>
+              <th>Protocol Name</th>
+              <th>Severity</th>
+              <th>Objective & Operational Directive</th>
+              <th>Trigger Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% guardrails.forEach(g => { %>
+              <tr>
+                <td class="col-rule-id"><code><%= g.ruleId %></code></td>
+                <td class="col-rule-name"><strong><%= g.name %></strong></td>
+                <td><span class="severity-pill <%= g.severity.toLowerCase() %>"><%= g.severity %></span></td>
+                <td><%= g.description %> <em>(<%= g.action %>)</em></td>
+                <td>Continuous during prompt compilation</td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete System Prompt Transparency -->
+  <section class="section system-prompt-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Open Source Transparency</span>
+        <h2 class="section-title">Master Core System Prompt</h2>
+        <p class="section-desc">
+          The foundational prompt crafted by Shashank, Shubh, and Ashutosh governing model persona, tone, and citation ethics.
+        </p>
+      </div>
+
+      <div class="code-viewer-card">
+        <div class="code-viewer-header">
+          <span><i class="fa-solid fa-code"></i> SYSTEM_PROMPT_CORE (NyayaNexus v1.0)</span>
+          <button type="button" class="btn-copy-code" id="copySystemPromptBtn">
+            <i class="fa-solid fa-copy"></i> Copy Prompt
+          </button>
+        </div>
+        <pre class="code-viewer-body"><code id="systemPromptText"><%= corePrompt %></code></pre>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="/js/promptStudio.js"></script>
+
+<%- include('partials/footer') %>

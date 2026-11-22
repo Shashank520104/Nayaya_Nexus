@@ -1,0 +1,81 @@
+[
+  {
+    "category": "FIR & Police Rights",
+    "icon": "shield-alt",
+    "queries": [
+      {
+        "lang": "hi",
+        "title": "थाने में एफआईआर दर्ज न होने पर अधिकार",
+        "text": "अगर पुलिस मेरी चोरी या झगड़े की FIR दर्ज करने से मना करे तो Zero FIR कैसे दर्ज कराएं?"
+      },
+      {
+        "lang": "en",
+        "title": "Arrest rights for women after sunset",
+        "text": "What are the legal rights regarding arrest of women after sunset under the new BNSS 2023 laws?"
+      },
+      {
+        "lang": "mr",
+        "title": "पोलीस ठाण्यात तक्रार दाखल करण्याचे नियम",
+        "text": "पोलीस ठाण्यात तक्रार दाखल करताना कायदेशीर अधिकार काय आहेत आणि झिरो एफआयआर काय आहे?"
+      }
+    ]
+  },
+  {
+    "category": "Government Welfare Schemes",
+    "icon": "hand-holding-heart",
+    "queries": [
+      {
+        "lang": "hi",
+        "title": "पीएम किसान योजना 6000 रुपये किस्त",
+        "text": "पीएम किसान सम्मान निधि की अगली किस्त कैसे चेक करें और ई-केवाईसी (e-KYC) कैसे पूरी करें?"
+      },
+      {
+        "lang": "en",
+        "title": "Ayushman Bharat 70+ Senior Citizen eligibility",
+        "text": "Are senior citizens aged 70 and above eligible for Ayushman Bharat ₹5 Lakh cover regardless of family income?"
+      },
+      {
+        "lang": "bn",
+        "title": "পিএম কিষাণ যোজনার আবেদন পদ্ধতি",
+        "text": "প্রধানমন্ত্রী কিষাণ সম্মান নিধি প্রকল্পে আবেদন করতে কী কী নথিপত্র প্রয়োজন?"
+      }
+    ]
+  },
+  {
+    "category": "Consumer & Financial Protection",
+    "icon": "shopping-cart",
+    "queries": [
+      {
+        "lang": "en",
+        "title": "E-Commerce seller refused refund on damaged laptop",
+        "text": "An e-commerce app sent a damaged laptop and refused refund. How to send a legal notice and file on e-Daakhil without a lawyer?"
+      },
+      {
+        "lang": "hi",
+        "title": "चेक बाउंस होने पर 138 का कानूनी नोटिस",
+        "text": "अगर किसी का चेक बाउंस हो गया है, तो कितने दिन के भीतर लीगल नोटिस भेजना जरूरी है?"
+      },
+      {
+        "lang": "te",
+        "title": "సైబర్ క్రైమ్ 1930 హెల్ప్‌లైన్",
+        "text": "ఆన్‌లైన్ మోసం జరిగినప్పుడు 1930 హెల్ప్‌లైన్ ద్వారా గోల్డెన్ అవర్‌లో డబ్బు ఎలా ఫ్రీజ్ చేయాలి?"
+      }
+    ]
+  },
+  {
+    "category": "RTI & Transparency",
+    "icon": "file-alt",
+    "queries": [
+      {
+        "lang": "hi",
+        "title": "सड़क निर्माण या राशन कार्ड पर आरटीआई कैसे लगाएं?",
+        "text": "ग्राम पंचायत में विकास कार्य या सड़क बजट की जानकारी मांगने के लिए RTI कैसे लगाएं?"
+      },
+      {
+        "lang": "en",
+        "title": "30-day RTI timeline and First Appeal",
+        "text": "What is the procedure if the Public Information Officer (PIO) does not respond within the mandatory 30 days under RTI Act?"
+      }
+    ]
+  }
+]

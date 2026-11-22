@@ -1,0 +1,137 @@
+[
+  {
+    "id": "fir-registration",
+    "title": "First Information Report (FIR) & Zero FIR Rights",
+    "bnsSection": "Section 173, Bharatiya Nagarik Suraksha Sanhita (BNSS 2023)",
+    "ipcSection": "Section 154, Code of Criminal Procedure (CrPC 1973)",
+    "category": "Criminal Law & Citizen Rights",
+    "summary": "Mandatory registration of FIR in cognizable offenses. A police officer cannot refuse to register an FIR.",
+    "keyRights": [
+      "Zero FIR: You can file an FIR at ANY police station irrespective of territorial jurisdiction if a cognizable crime occurred. The station must register it as 'Zero FIR' and transfer it to the concerned jurisdiction.",
+      "Free Copy: The informant is entitled to receive a certified copy of the recorded FIR immediately, free of cost (BNSS Sec 173(2) / CrPC Sec 154(2)).",
+      "Remedy if Police Refuse: Send written substance of information to the Superintendent of Police (SP) by registered post (BNSS 173(4) / CrPC 154(3)).",
+      "Magistrate Recourse: If SP does not act, file an application before Judicial Magistrate under BNSS Section 175(3) (formerly CrPC 156(3)) requesting the court to order an investigation."
+    ],
+    "simplifiedExplanation": "If you witness or are a victim of a serious crime (theft, assault, cyber fraud, harassment), the police are legally required to file an FIR. If a local police station says 'this area does not fall under our jurisdiction', demand a 'Zero FIR'. A Zero FIR ensures immediate preservation of evidence and quick investigation before jurisdiction transfer.",
+    "helpline": "Emergency 112 / Women Helpline 1091",
+    "tags": ["fir", "zero fir", "police", "complaint", "thana", "cognizable", "crpc 154", "bnss 173"]
+  },
+  {
+    "id": "bns-cheating-fraud",
+    "title": "Cheating and Financial Fraud",
+    "bnsSection": "Section 318, Bharatiya Nyaya Sanhita (BNS 2023)",
+    "ipcSection": "Section 420, Indian Penal Code (IPC 1860)",
+    "category": "Property & Financial Offenses",
+    "summary": "Dishonestly inducing delivery of property or cheating another person for illicit gain.",
+    "keyRights": [
+      "Punishment: Imprisonment up to 7 years along with fine under BNS Section 318(4).",
+      "Cyber Fraud Golden Hour: If cheated online, call 1930 immediately or log on to cybercrime.gov.in within 2 to 4 hours to freeze the transaction in transit banks.",
+      "Evidence Collection: Always save transaction UTR/reference numbers, bank statement extracts, chat screenshots, caller IDs, and payment gateway receipts."
+    ],
+    "simplifiedExplanation": "Under the new law (BNS 2023), the classic '420' cheating provision is now Section 318. If someone deceives you into giving money or property with fraudulent promises, it is a cognizable offense. Act fast—especially in digital frauds—to freeze the illicit flow of funds.",
+    "helpline": "Cyber Crime Helpline 1930",
+    "tags": ["420", "cheating", "fraud", "bns 318", "dhokhadhadi", "cybercrime", "online fraud"]
+  },
+  {
+    "id": "bns-hurt-assault",
+    "title": "Assault, Hurt, and Grievous Hurt",
+    "bnsSection": "Sections 115, 117, 131, Bharatiya Nyaya Sanhita (BNS 2023)",
+    "ipcSection": "Sections 323, 325, 351, Indian Penal Code (IPC 1860)",
+    "category": "Offenses Affecting Human Body",
+    "summary": "Voluntarily causing hurt or grievous hurt, criminal force, and assault.",
+    "keyRights": [
+      "Medical Examination: A victim of physical assault has the statutory right to immediate medical treatment and a Medico-Legal Certificate (MLC) at any government hospital.",
+      "Private Defense (Article 21 & BNS 34-44): Every citizen has the right to defend their body and property against unlawful aggression, using proportionate force."
+    ],
+    "simplifiedExplanation": "Simple physical violence (slapping, punching) was under IPC 323, now mapped to BNS 115. Grievous injury (bone fractures, loss of limb/sight) was under IPC 325, now BNS 117. Always get an MLC prepared by a doctor immediately as it serves as vital court evidence.",
+    "helpline": "Emergency 112",
+    "tags": ["assault", "marpeet", "hurt", "ipc 323", "bns 115", "grievous hurt", "mlc"]
+  },
+  {
+    "id": "consumer-protection",
+    "title": "Consumer Rights & Defective Products / Deficiency in Service",
+    "bnsSection": "Consumer Protection Act 2019 (Section 35 & 47)",
+    "ipcSection": "Civil Consumer Redressal Mechanism",
+    "category": "Consumer Affairs",
+    "summary": "Protection of consumer rights against defective goods, deficient services, misleading ads, and unfair trade practices.",
+    "keyRights": [
+      "Three-Tier Redressal: District Consumer Disputes Redressal Commission (claims up to ₹50 Lakh), State Commission (₹50 Lakh to ₹2 Crore), National Commission (above ₹2 Crore).",
+      "e-Daakhil Portal: Consumers can file consumer complaints online from home without hiring a lawyer at edaakhil.nic.in.",
+      "Product Liability: Manufacturers, service providers, and sellers are liable to compensate consumers for injury or harm caused by defective products.",
+      "Notice Period: Sending a formal 15 to 30 day legal demand notice gives companies a chance to resolve the grievance before filing in court."
+    ],
+    "simplifiedExplanation": "If an e-commerce platform, airline, hospital, builder, or company gives poor service or a damaged item and refuses a refund, you do not need an expensive lawyer. You can issue a consumer notice and file a case on e-Daakhil with nominal court fees.",
+    "helpline": "National Consumer Helpline 1915 or SMS to 8800001915",
+    "tags": ["consumer", "grahak", "refund", "defective", "warranty", "edaakhil", "amazon", "flipkart"]
+  },
+  {
+    "id": "rti-act",
+    "title": "Right to Information (RTI Act 2005)",
+    "bnsSection": "RTI Act 2005 (Sections 6, 7, 19)",
+    "ipcSection": "Administrative Transparency Law",
+    "category": "Governance & Transparency",
+    "summary": "Every Indian citizen's right to inspect public records and demand information from government bodies.",
+    "keyRights": [
+      "Mandatory 30-Day Timeline: Public Information Officer (PIO) must provide answers within 30 days of receiving application (48 hours if it concerns life or personal liberty).",
+      "Nominal Fee: Application fee is only ₹10 (Free for BPL citizens with valid certificate).",
+      "First Appeal (Sec 19(1)): If no response or incomplete response received within 30 days, file First Appeal within 30 days to the designated First Appellate Authority.",
+      "Second Appeal (Sec 19(3)): File Second Appeal before Central / State Information Commission (CIC/SIC) which has power to impose ₹250/day penalty up to ₹25,000 on defaulting PIOs."
+    ],
+    "simplifiedExplanation": "RTI allows any citizen to question road construction status, ration distribution lists, government exam marks, scheme beneficiary lists, or municipal budget expenditures. Apply online at rtionline.gov.in for central departments or state RTI portals.",
+    "helpline": "DoPT RTI Helpdesk 011-24622492 / rtionline.gov.in",
+    "tags": ["rti", "soochana adhikar", "transparency", "government delay", "file inspection", "pio"]
+  },
+  {
+    "id": "cheque-bounce-ni-act",
+    "title": "Cheque Bounce (Dishonour of Cheque)",
+    "bnsSection": "Section 138, Negotiable Instruments Act 1881",
+    "ipcSection": "Special Commercial Law",
+    "category": "Banking & Commercial Disputes",
+    "summary": "Criminal offense when a cheque is returned unpaid due to insufficient funds or exceeding arrangements.",
+    "keyRights": [
+      "Strict Timelines: Cheque must be presented within validity (3 months from date).",
+      "Statutory Notice: The payee must send a formal written demand notice to the drawer within 30 days of receiving bank memo.",
+      "15-Day Payment Window: Drawer is given 15 days from notice receipt to clear the payment.",
+      "Court Filing: If payment is not cleared within 15 days, criminal complaint must be filed before the Magistrate within 1 month.",
+      "Penalty: Up to 2 years imprisonment or fine up to twice the cheque amount, or both."
+    ],
+    "simplifiedExplanation": "If someone owes you money and gives a cheque that bounces for 'insufficient funds', follow the exact 30-day notice rule. Failing to send the notice within 30 days of receiving the bank dishonour slip forfeits your right to file under Section 138 NI Act.",
+    "helpline": "District Legal Services Authority (DLSA) 15100",
+    "tags": ["cheque bounce", "section 138", "ni act", "bank memo", "legal notice", "dishonour"]
+  },
+  {
+    "id": "domestic-violence-act",
+    "title": "Protection of Women from Domestic Violence Act (PWDVA 2005)",
+    "bnsSection": "PWDVA 2005 & BNS Section 85/86 (formerly IPC 498A)",
+    "ipcSection": "Section 498A IPC & PWDVA 2005",
+    "category": "Women Rights & Family Law",
+    "summary": "Civil and criminal protection for women against physical, sexual, emotional, verbal, and economic abuse in a domestic relationship.",
+    "keyRights": [
+      "Right to Reside in Shared Household: A woman cannot be evicted from the shared marital home regardless of ownership.",
+      "Protection Orders: Magistrate can issue restraining orders preventing the abuser from contacting or entering the woman's workplace or residence.",
+      "Monetary Relief: Maintenance, medical expenses, and compensation for damages.",
+      "Protection Officers: Every district has designated Protection Officers to help file Domestic Incident Reports (DIR) free of cost."
+    ],
+    "simplifiedExplanation": "Domestic violence is not limited to physical beatings; it includes verbal abuse, threats, taking away financial resources, and denying shelter. Women can approach the nearest Protection Officer, police station, or Magistrate directly for immediate emergency relief.",
+    "helpline": "Women Helpline 1091 / National Commission for Women 7827170170",
+    "tags": ["domestic violence", "women", "patni", "498a", "bns 85", "pwdva", "maintenance", "mahila"]
+  },
+  {
+    "id": "arrest-and-detention-rights",
+    "title": "Citizen Rights During Police Arrest & Detention",
+    "bnsSection": "Sections 35-43, Bharatiya Nagarik Suraksha Sanhita (BNSS 2023)",
+    "ipcSection": "Sections 41-50, Code of Criminal Procedure (CrPC 1973) & Art 22",
+    "category": "Fundamental Constitutional Rights",
+    "summary": "Safeguards against arbitrary arrest and custodial torture established under D.K. Basu guidelines and Constitution of India.",
+    "keyRights": [
+      "Arrest Memo: Police must prepare a formal memo of arrest signed by at least one family member or respectable locality witness.",
+      "Informing Relatives: Right to have a family member or friend informed of the arrest and place of detention immediately within 8 to 12 hours.",
+      "Arrest of Women: A woman cannot be arrested after sunset and before sunrise except under exceptional circumstances with prior permission of a Judicial Magistrate, and only by a female police officer.",
+      "Production before Magistrate within 24 Hours: Accused must be produced before the nearest Judicial Magistrate within 24 hours of arrest excluding travel time (Article 22(2)).",
+      "Right to Counsel: Right to consult and be defended by a legal practitioner of choice, or get free legal aid from DLSA if unable to afford one."
+    ],
+    "simplifiedExplanation": "Police officers must wear clear identification badges. You have the right to remain calm, know the exact grounds of arrest, have your family notified, undergo medical checkup before detention, and speak to a lawyer.",
+    "helpline": "NALSA 15100 / Emergency 112",
+    "tags": ["arrest", "police custody", "rights", "dk basu", "bail", "remand", "article 22"]
+  }
+]

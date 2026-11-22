@@ -1,0 +1,88 @@
+<header class="site-header">
+  <div class="container header-container">
+    <a href="/" class="brand-logo">
+      <div class="logo-symbol">
+        <i class="fa-solid fa-scale-balanced"></i>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">Nyaya<span>Nexus</span></span>
+        <span class="logo-badge">न्यायनेक्सस</span>
+      </div>
+    </a>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+      <ul class="nav-links">
+        <li>
+          <a href="/chat" class="nav-link <%= activePage === 'chat' ? 'active' : '' %>">
+            <i class="fa-solid fa-comments"></i> <span>Chatbot</span>
+          </a>
+        </li>
+        <li>
+          <a href="/schemes" class="nav-link <%= activePage === 'schemes' ? 'active' : '' %>">
+            <i class="fa-solid fa-hand-holding-heart"></i> <span>Schemes</span>
+          </a>
+        </li>
+        <li>
+          <a href="/legal" class="nav-link <%= activePage === 'legal' ? 'active' : '' %>">
+            <i class="fa-solid fa-book-journal-whills"></i> <span>BNS & Rights</span>
+          </a>
+        </li>
+        <li>
+          <a href="/drafts" class="nav-link <%= activePage === 'drafts' ? 'active' : '' %>">
+            <i class="fa-solid fa-file-contract"></i> <span>RTI & Drafts</span>
+          </a>
+        </li>
+        <li>
+          <a href="/prompt-studio" class="nav-link <%= activePage === 'studio' ? 'active' : '' %>">
+            <i class="fa-solid fa-microscope"></i> <span>Prompt Studio</span>
+          </a>
+        </li>
+        <li>
+          <a href="/team" class="nav-link <%= activePage === 'team' ? 'active' : '' %>">
+            <i class="fa-solid fa-users"></i> <span>Team</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header Actions (Language, Theme, CTA) -->
+    <div class="header-actions">
+      <!-- Language Picker -->
+      <div class="language-dropdown-wrapper">
+        <button type="button" class="lang-btn" id="langPickerBtn" aria-label="Select Language">
+          <i class="fa-solid fa-language"></i>
+          <span id="currentLangLabel">हिन्दी / En</span>
+          <i class="fa-solid fa-chevron-down caret-icon"></i>
+        </button>
+        <div class="lang-menu" id="langDropdown">
+          <div class="lang-menu-header">Select Language / भाषा चुनें</div>
+          <% supportedLanguages.forEach(lang => { %>
+            <button type="button" class="lang-option" data-code="<%= lang.code %>">
+              <span class="lang-native"><%= lang.nativeName %></span>
+              <span class="lang-eng">(<%= lang.name %>)</span>
+            </button>
+          <% }) %>
+        </div>
+      </div>
+
+      <!-- Dark / Light Theme Toggle -->
+      <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+        <i class="fa-solid fa-moon dark-icon"></i>
+        <i class="fa-solid fa-sun light-icon"></i>
+      </button>
+
+      <!-- Emergency Helpline Shortcut -->
+      <a href="tel:112" class="emergency-badge" title="National Emergency Helpline">
+        <i class="fa-solid fa-phone-volume"></i>
+        <span>112</span>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars open-icon"></i>
+        <i class="fa-solid fa-xmark close-icon"></i>
+      </button>
+    </div>
+  </div>
+</header>

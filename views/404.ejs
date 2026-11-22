@@ -1,0 +1,28 @@
+<%- include('partials/head', { title: '404 - Page Not Found | NyayaNexus' }) %>
+<%- include('partials/navbar') %>
+
+<main class="error-page-main">
+  <div class="container error-container text-center">
+    <div class="error-icon">
+      <i class="fa-solid fa-scale-unbalanced"></i>
+    </div>
+    <h1 class="error-code">404</h1>
+    <h2 class="error-title">Page Not Found</h2>
+    <p class="error-desc">
+      The legal section, scheme, or route you are looking for (<code><%= url %></code>) does not exist or has been relocated.
+    </p>
+
+    <div class="error-actions">
+      <a href="/" class="btn-primary">
+        <i class="fa-solid fa-house"></i>
+        <span>Return to Home</span>
+      </a>
+      <a href="/chat" class="btn-secondary">
+        <i class="fa-solid fa-comments"></i>
+        <span>Ask NyayaNexus Chat</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,203 @@
+<%- include('partials/head', { title: 'NyayaNexus – Multilingual Legal Chatbot' }) %>
+<%- include('partials/navbar') %>
+
+<main class="chat-page-main">
+  <div class="chat-layout container">
+    <!-- Main Chat Window Area -->
+    <div class="chat-container-card">
+      <!-- Chat Header -->
+      <div class="chat-card-header">
+        <div class="chat-assistant-meta">
+          <div class="avatar-status">
+            <div class="assistant-avatar">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <span class="status-dot" title="Engine Active"></span>
+          </div>
+          <div class="assistant-details">
+            <h2 class="assistant-name">NyayaNexus Legal Assistant</h2>
+            <span class="assistant-subtitle" id="engineStatusBadge">
+              <i class="fa-solid fa-shield-halved"></i> Guardrails Active &bull; BNS 2023 Grounded
+            </span>
+          </div>
+        </div>
+
+        <!-- Chat Controls -->
+        <div class="chat-toolbar">
+          <!-- Language Picker inside Chat -->
+          <div class="chat-lang-select-wrapper">
+            <select id="chatLanguageSelect" class="chat-select" aria-label="Chat Language">
+              <option value="en">English (India)</option>
+              <option value="hi" selected>हिन्दी (Hindi)</option>
+              <option value="bn">বাংলা (Bengali)</option>
+              <option value="te">తెలుగు (Telugu)</option>
+              <option value="ta">தமிழ் (Tamil)</option>
+              <option value="mr">मराठी (Marathi)</option>
+              <option value="gu">ગુજરાતી (Gujarati)</option>
+              <option value="kn">ಕನ್ನಡ (Kannada)</option>
+              <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+            </select>
+          </div>
+
+          <!-- Prompt Inspector Drawer Toggle -->
+          <button type="button" class="btn-icon" id="openInspectorBtn" title="Inspect Prompt Engineering Trace">
+            <i class="fa-solid fa-microscope"></i>
+            <span class="btn-tooltip">Prompt Inspector</span>
+          </button>
+
+          <!-- Clear Chat -->
+          <button type="button" class="btn-icon" id="clearChatBtn" title="Reset Conversation">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+            <span class="btn-tooltip">Reset Chat</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Messages Stream -->
+      <div class="chat-messages" id="chatMessages">
+        <!-- Initial Welcome Message from Assistant -->
+        <div class="message assistant-message" id="welcomeMessage">
+          <div class="message-avatar">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+          <div class="message-body">
+            <div class="message-meta">
+              <span class="sender-name">NyayaNexus Assistant</span>
+              <span class="message-time">Just now</span>
+            </div>
+            <div class="message-text">
+              <p>
+                <strong>नमस्ते! मैं न्यायनेक्सस (NyayaNexus) हूँ।</strong><br>
+                मैं भारतीय कानूनों (BNS 2023, BNSS, Consumer Protection, RTI) और सरकारी योजनाओं (PM Kisan, Ayushman Bharat, PMAY आदि) को सरल भाषा में समझाने के लिए तैयार हूँ।
+              </p>
+              <p>
+                आप अपनी भाषा (हिन्दी, English, বাংলা, తెలుగు, मराठी ইত্যাদি) में सवाल पूछ सकते हैं या नीचे दिए गए विषयों में से किसी एक पर क्लिक कर सकते हैं:
+              </p>
+            </div>
+
+            <!-- Starter Prompt Suggestions -->
+            <div class="quick-starters">
+              <button type="button" class="starter-chip" data-query="अगर पुलिस मेरी चोरी या झगड़े की FIR दर्ज करने से मना करे तो Zero FIR कैसे दर्ज कराएं?">
+                <i class="fa-solid fa-shield"></i> पुलिस FIR दर्ज न करे तो Zero FIR कैसे करें?
+              </button>
+              <button type="button" class="starter-chip cyber-chip" data-query="मेरे साथ 20 मिनट पहले ऑनलाइन यूपीआई फ्रॉड हुआ है। 1930 गोल्डन आवर में पैसे कैसे फ्रीज कराएं?">
+                <i class="fa-solid fa-triangle-exclamation"></i> 1930 हेल्पलाइन पर ऑनलाइन फ्रॉड रिपोर्ट
+              </button>
+              <button type="button" class="starter-chip" data-query="पीएम किसान सम्मान निधि की अगली ₹6000 किस्त कैसे चेक करें और ई-केवाईसी कैसे पूरी करें?">
+                <i class="fa-solid fa-tractor"></i> पीएम किसान सम्मान निधि e-KYC नियम
+              </button>
+              <button type="button" class="starter-chip" data-query="दुकानदार या ई-कॉमर्स साइट ने खराब सामान दिया और रिफंड से मना कर दिया। ई-दाखिल पर बिना वकील केस कैसे करें?">
+                <i class="fa-solid fa-cart-shopping"></i> खराब सामान पर उपभोक्ता अदालत (e-Daakhil)
+              </button>
+              <button type="button" class="starter-chip" data-query="सरकारी दफ्तर या सड़क निर्माण पर आरटीआई (RTI) कैसे लगाएं और 30 दिन में जवाब न मिले तो क्या करें?">
+                <i class="fa-solid fa-file-invoice"></i> आरटीआई (RTI) आवेदन और अपील प्रक्रिया
+              </button>
+            </div>
+
+            <div class="message-footer-alert">
+              <i class="fa-solid fa-info-circle"></i>
+              <span>विधिक जागरूकता हेतु। औपचारिक कोर्ट मामलों के लिए NALSA (15100) पर संपर्क करें।</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typing Indicator -->
+      <div class="typing-indicator" id="typingIndicator" style="display: none;">
+        <div class="message-avatar">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <div class="typing-bubble">
+          <span class="typing-label">Analyzing statutes & framing grounded guidance</span>
+          <div class="typing-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <div class="chat-input-wrapper">
+        <form id="chatForm" class="chat-form">
+          <!-- Voice Dictation Button (Web Speech API) -->
+          <button type="button" class="btn-voice" id="voiceMicBtn" title="Speak your query (Speech to Text)">
+            <i class="fa-solid fa-microphone mic-normal"></i>
+            <i class="fa-solid fa-microphone-lines mic-listening"></i>
+          </button>
+
+          <!-- Input Textarea -->
+          <textarea 
+            id="chatInput" 
+            class="chat-textarea" 
+            placeholder="Type your legal or scheme question in Hindi, English, Bengali, etc... (or click Mic to speak)"
+            rows="1"
+            required
+          ></textarea>
+
+          <!-- Send Button -->
+          <button type="submit" class="btn-send" id="sendBtn" title="Send query">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+
+        <div class="chat-disclaimer-sub">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <span>Bar Council Rule 36: For informational empowerment. In active disputes, call <strong>15100</strong> (NALSA).</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide-over Prompt Engineering Inspector Drawer -->
+    <aside class="prompt-inspector-drawer" id="promptInspectorDrawer">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <i class="fa-solid fa-microscope"></i>
+          <h3>Prompt Inspector</h3>
+        </div>
+        <button type="button" class="btn-close-drawer" id="closeInspectorBtn" aria-label="Close Inspector">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <p class="drawer-intro">
+          This inspector visualizes the live prompt engineering pipeline constructed by <strong>Shashank, Shubh, and Ashutosh</strong> for each turn.
+        </p>
+
+        <!-- Dynamic Snapshot Data -->
+        <div class="inspector-section">
+          <h4><i class="fa-solid fa-language"></i> Detected Language & Domain</h4>
+          <div class="inspector-badge-row">
+            <span class="badge badge-lang" id="inspLanguage">Hindi / English</span>
+            <span class="badge badge-domain" id="inspDomain">Criminal / Scheme</span>
+          </div>
+        </div>
+
+        <div class="inspector-section">
+          <h4><i class="fa-solid fa-shield-virus"></i> Active Guardrails Applied</h4>
+          <ul class="guardrail-checklist" id="inspGuardrails">
+            <li><i class="fa-solid fa-circle-check"></i> [G-01-DISCLAIMER] Bar Council Rule 36 Protocol</li>
+            <li><i class="fa-solid fa-circle-check"></i> [G-02-BNS-IPC-ALIGNMENT] Dual Statute Mapping</li>
+            <li><i class="fa-solid fa-circle-check"></i> [G-04-ZERO-HALLUCINATION] Statute Grounding Check</li>
+          </ul>
+        </div>
+
+        <div class="inspector-section">
+          <h4><i class="fa-solid fa-book-bookmark"></i> Grounded Citations</h4>
+          <div class="citations-container" id="inspCitations">
+            <p class="empty-state-text">Ask a question to see statutory references injected here.</p>
+          </div>
+        </div>
+
+        <div class="inspector-section">
+          <h4><i class="fa-solid fa-terminal"></i> Injected System Prompt Preview</h4>
+          <pre class="prompt-raw-box"><code id="inspSystemPrompt">NyayaNexus System Prompt will be traced on your first query...</code></pre>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<script src="/js/speech.js"></script>
+<script src="/js/chat.js"></script>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,200 @@
+<%- include('partials/head', { title: 'Project Team & Architecture – Shashank, Shubh & Ashutosh | NyayaNexus' }) %>
+<%- include('partials/navbar') %>
+
+<main class="team-page-main">
+  <!-- Top Hero Header -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-badge">
+        <i class="fa-solid fa-users"></i> Project Creators & Engineering Team
+      </div>
+      <h1 class="page-title">Meet the Team Behind NyayaNexus</h1>
+      <p class="page-subtitle">
+        Developed collaboratively by <strong>Shashank</strong>, <strong>Shubh</strong>, and <strong>Ashutosh</strong> as an end-to-end working engineering project following clean MVC architecture.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Members Grid -->
+  <section class="section team-profiles-section">
+    <div class="container">
+      <div class="team-profiles-grid">
+        <!-- Shashank -->
+        <div class="team-profile-card">
+          <div class="profile-card-header">
+            <div class="profile-avatar-circle">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <div class="profile-meta">
+              <h2 class="profile-name">Shashank</h2>
+              <span class="profile-role">Lead Architect & Backend Systems</span>
+            </div>
+          </div>
+
+          <div class="profile-body">
+            <h4 class="profile-subheading"><i class="fa-solid fa-layer-group"></i> Core Module Ownership:</h4>
+            <ul class="contributions-list">
+              <li><strong>MVC Architecture:</strong> Designed and implemented clean separation of Models, Views, Controllers, and Service layers.</li>
+              <li><strong>AI Orchestration & Fallback:</strong> Integrated Google Gemini API with seamless deterministic fallback to the Nyaya Grounded Engine.</li>
+              <li><strong>API Routes & Middlewares:</strong> Configured RESTful endpoints, rate limiting, and serverless compatibility for Vercel and Render.</li>
+              <li><strong>Data Modeling:</strong> Built SchemeModel, LegalModel, and ChatSessionModel data access structures.</li>
+            </ul>
+
+            <div class="profile-skills-row">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express MVC</span>
+              <span class="skill-tag">Gemini API</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">System Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shubh -->
+        <div class="team-profile-card">
+          <div class="profile-card-header">
+            <div class="profile-avatar-circle">
+              <i class="fa-solid fa-microscope"></i>
+            </div>
+            <div class="profile-meta">
+              <h2 class="profile-name">Shubh</h2>
+              <span class="profile-role">Prompt Engineer & Legal Domain Specialist</span>
+            </div>
+          </div>
+
+          <div class="profile-body">
+            <h4 class="profile-subheading"><i class="fa-solid fa-brain"></i> Core Module Ownership:</h4>
+            <ul class="contributions-list">
+              <li><strong>Prompt Pipeline Engineering:</strong> Designed layered system prompts, domain classifiers, and few-shot vernacular examples.</li>
+              <li><strong>Anti-Hallucination Guardrails:</strong> Built G-01 Bar Council disclaimer, G-03 1930 Cyber Fraud triage, and G-04 statute grounding check.</li>
+              <li><strong>BNS 2023 / IPC Mapping:</strong> Curated Indian statutory dataset aligning new criminal laws with citizen rights.</li>
+              <li><strong>Evaluation Benchmarking:</strong> Developed the Prompt Studio comparative benchmarks comparing raw vs refined prompts.</li>
+            </ul>
+
+            <div class="profile-skills-row">
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Indic NLP</span>
+              <span class="skill-tag">BNS 2023 / CrPC</span>
+              <span class="skill-tag">Safety Guardrails</span>
+              <span class="skill-tag">Context Injection</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ashutosh -->
+        <div class="team-profile-card">
+          <div class="profile-card-header">
+            <div class="profile-avatar-circle">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <div class="profile-meta">
+              <h2 class="profile-name">Ashutosh</h2>
+              <span class="profile-role">Frontend Architect & UX Specialist</span>
+            </div>
+          </div>
+
+          <div class="profile-body">
+            <h4 class="profile-subheading"><i class="fa-solid fa-desktop"></i> Core Module Ownership:</h4>
+            <ul class="contributions-list">
+              <li><strong>Multilingual UI & Theming:</strong> Designed accessible, responsive layouts with custom CSS variables and dark/light mode toggle.</li>
+              <li><strong>Web Speech Integration:</strong> Implemented microphone voice input and speech synthesis audio playback in Indian accents.</li>
+              <li><strong>Scheme Wizard:</strong> Built the 3-step interactive demographic eligibility evaluator modal.</li>
+              <li><strong>Legal Notice & RTI Generator:</strong> Engineered dynamic form templates with live preview, copy, print, and download.</li>
+            </ul>
+
+            <div class="profile-skills-row">
+              <span class="skill-tag">Vanilla Modern JS</span>
+              <span class="skill-tag">EJS Templates</span>
+              <span class="skill-tag">Web Speech API</span>
+              <span class="skill-tag">Responsive UI/UX</span>
+              <span class="skill-tag">CSS Design Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MVC Architecture Breakdown -->
+  <section class="section mvc-architecture-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Software Engineering</span>
+        <h2 class="section-title">MVC Architecture & Separation of Concerns</h2>
+        <p class="section-desc">
+          NyayaNexus follows a strictly humanized, modular codebase with zero bloated monolithic files.
+        </p>
+      </div>
+
+      <div class="mvc-grid">
+        <!-- Model -->
+        <div class="mvc-card">
+          <div class="mvc-card-header">
+            <div class="mvc-pill pill-model">Model Layer</div>
+            <h3><code>/models</code></h3>
+          </div>
+          <p>Encapsulates data structures, domain logic, and validation.</p>
+          <ul class="mvc-file-list">
+            <li><code>schemeModel.js</code>: Welfare database & eligibility engine</li>
+            <li><code>legalModel.js</code>: BNS 2023 & IPC statutory repository</li>
+            <li><code>promptModel.js</code>: System prompt templates & benchmarks</li>
+            <li><code>draftModel.js</code>: RTI & legal notice formats</li>
+            <li><code>chatSessionModel.js</code>: Thread history & prompt traces</li>
+          </ul>
+        </div>
+
+        <!-- View -->
+        <div class="mvc-card">
+          <div class="mvc-card-header">
+            <div class="mvc-pill pill-view">View Layer</div>
+            <h3><code>/views</code></h3>
+          </div>
+          <p>Semantic EJS templates and modular frontend components.</p>
+          <ul class="mvc-file-list">
+            <li><code>index.ejs</code>: Public citizen empowerment landing page</li>
+            <li><code>chat.ejs</code>: Multilingual AI chat interface with voice</li>
+            <li><code>schemes.ejs</code>: Schemes finder & eligibility wizard</li>
+            <li><code>legal-guide.ejs</code>: BNS vs IPC side-by-side transition</li>
+            <li><code>draft-generator.ejs</code>: RTI & legal notice live maker</li>
+            <li><code>prompt-studio.ejs</code>: Prompt refinement laboratory</li>
+          </ul>
+        </div>
+
+        <!-- Controller -->
+        <div class="mvc-card">
+          <div class="mvc-card-header">
+            <div class="mvc-pill pill-controller">Controller Layer</div>
+            <h3><code>/controllers</code></h3>
+          </div>
+          <p>Receives user input, coordinates models & services, sends view/JSON.</p>
+          <ul class="mvc-file-list">
+            <li><code>chatController.js</code>: Manages queries & context snapshots</li>
+            <li><code>schemeController.js</code>: Handles search & eligibility calls</li>
+            <li><code>legalController.js</code>: Delivers BNS explorer & helplines</li>
+            <li><code>draftController.js</code>: Generates RTI & notice documents</li>
+            <li><code>promptStudioController.js</code>: Runs raw vs refined tests</li>
+            <li><code>teamController.js</code>: Renders team portfolio</li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="mvc-card">
+          <div class="mvc-card-header">
+            <div class="mvc-pill pill-service">Services Layer</div>
+            <h3><code>/services</code></h3>
+          </div>
+          <p>Reusable business logic, AI calling, and prompt pipelines.</p>
+          <ul class="mvc-file-list">
+            <li><code>promptEngine.js</code>: Language detection & context injection</li>
+            <li><code>geminiService.js</code>: Google Gemini API integration</li>
+            <li><code>legalGroundingService.js</code>: Deterministic legal fallback</li>
+            <li><code>schemeMatchingService.js</code>: Demographic score calculation</li>
+            <li><code>draftGeneratorService.js</code>: Legal document text compiler</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

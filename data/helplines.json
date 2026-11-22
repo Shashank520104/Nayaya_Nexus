@@ -1,0 +1,80 @@
+[
+  {
+    "id": "emergency",
+    "name": "National Emergency Response System",
+    "number": "112",
+    "category": "Emergency & Police",
+    "coverage": "All India",
+    "timing": "24x7",
+    "description": "Unified single emergency helpline for Police, Fire, and Ambulance emergencies across all States and Union Territories."
+  },
+  {
+    "id": "cyber-crime",
+    "name": "National Cyber Crime Reporting Helpline",
+    "number": "1930",
+    "category": "Cyber Crime & Online Fraud",
+    "coverage": "All India",
+    "timing": "24x7",
+    "portal": "https://cybercrime.gov.in",
+    "description": "Report financial frauds, UPI scams, identity theft, unauthorized account debits immediately to freeze funds within the golden hour."
+  },
+  {
+    "id": "nalsa-legal-aid",
+    "name": "National Legal Services Authority (NALSA) Helpline",
+    "number": "15100",
+    "category": "Free Legal Aid & Guidance",
+    "coverage": "All India",
+    "timing": "24x7",
+    "portal": "https://nalsa.gov.in",
+    "description": "Free legal aid and advice for women, children, scheduled castes/tribes, disabled, and low-income citizens across all District and Taluka courts."
+  },
+  {
+    "id": "national-consumer",
+    "name": "National Consumer Helpline (NCH)",
+    "number": "1915",
+    "category": "Consumer Protection",
+    "coverage": "All India",
+    "timing": "08:00 AM to 08:00 PM (Except National Holidays)",
+    "portal": "https://consumerhelpline.gov.in",
+    "description": "Assistance for consumer disputes, e-commerce refunds, defective electronics, warranty defaults, and airline/railway complaints."
+  },
+  {
+    "id": "women-helpline",
+    "name": "Women in Distress Helpline",
+    "number": "1091 / 181",
+    "category": "Women Safety & Welfare",
+    "coverage": "All India",
+    "timing": "24x7",
+    "portal": "https://ncw.nic.in",
+    "description": "Emergency response, counseling, shelter home referral, and legal guidance for women facing domestic violence, harassment, or abuse."
+  },
+  {
+    "id": "childline",
+    "name": "Childline Emergency Service",
+    "number": "1098",
+    "category": "Child Protection",
+    "coverage": "All India",
+    "timing": "24x7",
+    "portal": "https://childlineindia.org",
+    "description": "24-hour free emergency service for children in need of care and protection, child labor rescue, and runaway children support."
+  },
+  {
+    "id": "kisan-call-centre",
+    "name": "Kisan Call Centre (Agriculture)",
+    "number": "1800-180-1551",
+    "category": "Agriculture & Farming",
+    "coverage": "All India (Available in 22 local languages)",
+    "timing": "06:00 AM to 10:00 PM",
+    "portal": "https://mkisan.gov.in",
+    "description": "Expert advice on crop advisories, PM-Kisan installment tracking, seed subsidies, fertilizer prices, and weather alerts."
+  },
+  {
+    "id": "elderline",
+    "name": "Elderline (Senior Citizens National Helpline)",
+    "number": "14567",
+    "category": "Senior Citizens",
+    "coverage": "All India",
+    "timing": "08:00 AM to 08:00 PM",
+    "description": "Free information, guidance on pensions, maintenance of parents under Maintenance and Welfare of Parents Act 2007, and emotional support."
+  }
+]

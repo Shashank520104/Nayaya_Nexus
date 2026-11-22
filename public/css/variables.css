@@ -1,0 +1,85 @@
+/**
+ * CSS Variables & Design Tokens
+ * Project: NyayaNexus
+ * Warm Indian Legal & Civic Design System
+ */
+
+:root {
+  /* Primary & Accent Palette */
+  --primary: #0F2A4A;
+  --primary-hover: #091D34;
+  --primary-light: #EBF3FC;
+  --accent: #E85D04;
+  --accent-hover: #DC2F02;
+  --accent-light: #FFF0EB;
+  --secondary: #1E3E62;
+  
+  /* Status & Guardrails */
+  --success: #1B8755;
+  --success-bg: #E8F5E9;
+  --warning: #D97706;
+  --warning-bg: #FEF3C7;
+  --danger: #DC2626;
+  --danger-bg: #FEE2E2;
+  --cyber-gold: #B45309;
+  --cyber-bg: #FEF3C7;
+
+  /* Surfaces & Backgrounds (Light Mode) */
+  --bg-body: #F7F9FC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F0F4F8;
+  --border-color: #E2E8F0;
+  --border-focus: #3B82F6;
+
+  /* Typography Colors */
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Font Families */
+  --font-sans: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --primary: #38BDF8;
+  --primary-hover: #0EA5E9;
+  --primary-light: #082F49;
+  --accent: #FB923C;
+  --accent-hover: #F97316;
+  --accent-light: #431407;
+  --secondary: #94A3B8;
+
+  --bg-body: #0B1120;
+  --bg-surface: #131E33;
+  --bg-subtle: #1E293B;
+  --border-color: #2D3D58;
+  --border-focus: #38BDF8;
+
+  --text-main: #F1F5F9;
+  --text-muted: #94A3B8;
+  --text-light: #64748B;
+  --text-inverse: #0B1120;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}

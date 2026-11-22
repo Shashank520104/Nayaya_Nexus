@@ -1,0 +1,331 @@
+[
+  {
+    "id": "pm-kisan",
+    "name": "PM-Kisan Samman Nidhi",
+    "hindiName": "प्रधानमंत्री किसान सम्मान निधि",
+    "category": "Agriculture",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "targetGroup": "Small & Marginal Landholding Farmers",
+    "benefit": "₹6,000 per year paid in three equal four-monthly installments directly into bank accounts via DBT.",
+    "eligibility": {
+      "minAge": 18,
+      "maxAge": 100,
+      "gender": "Any",
+      "occupation": "Farmer",
+      "maxIncomeAnnual": 1000000,
+      "state": "All India",
+      "landHolding": "Must hold cultivable land in applicant's name",
+      "exclusions": [
+        "Institutional landholders",
+        "Constitutional post holders",
+        "Serving or retired government employees",
+        "Income tax payers from previous assessment year",
+        "Professionals (Doctors, Engineers, Lawyers, CAs)"
+      ]
+    },
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Land Ownership Documents (Khatauni / Jamabandi / RoR)",
+      "Bank Account linked with Aadhaar & NPCI DBT enabled",
+      "Mobile number linked with Aadhaar for e-KYC"
+    ],
+    "applicationProcess": [
+      "Visit pmkisan.gov.in and click on 'New Farmer Registration'.",
+      "Enter Aadhaar number and select state, then verify via Aadhaar OTP.",
+      "Fill land record details (Khasra/Khata number) and upload land ownership proof.",
+      "Submit and complete mandatory e-KYC using biometrics or facial recognition / OTP."
+    ],
+    "officialUrl": "https://pmkisan.gov.in",
+    "helpline": "155261 / 1800-115-526",
+    "tags": ["farmer", "kisan", "agriculture", "dbt", "kheti", "subsidy"]
+  },
+  {
+    "id": "ayushman-bharat",
+    "name": "Ayushman Bharat – PMJAY",
+    "hindiName": "आयुष्मान भारत - प्रधानमंत्री जन आरोग्य योजना",
+    "category": "Healthcare",
+    "ministry": "Ministry of Health and Family Welfare",
+    "targetGroup": "Low-income and vulnerable families",
+    "benefit": "Cashless secondary and tertiary health cover up to ₹5 Lakh per eligible family per year across 27,000+ empaneled hospitals.",
+    "eligibility": {
+      "minAge": 0,
+      "maxAge": 100,
+      "gender": "Any",
+      "occupation": "Any",
+      "maxIncomeAnnual": 250000,
+      "state": "All India",
+      "criteria": "Deprivation criteria under SECC 2011 (Socio-Economic Caste Census), NFSA Ration Card holders, or all Senior Citizens aged 70+ irrespective of income."
+    },
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Ration Card / NFSA Card",
+      "Active Mobile Number",
+      "Age proof for Senior Citizen (70+) scheme extension"
+    ],
+    "applicationProcess": [
+      "Check eligibility at beneficiary.nha.gov.in using Aadhaar or Ration Card number.",
+      "Visit nearest Common Service Centre (CSC) or empaneled government/private hospital Ayushman Mitra desk.",
+      "Complete biometric e-KYC verification.",
+      "Download Ayushman Card (Golden Card) from the portal."
+    ],
+    "officialUrl": "https://nha.gov.in",
+    "helpline": "14555",
+    "tags": ["health", "hospital", "medical", "treatment", "swasthya", "5lakh", "ayushman"]
+  },
+  {
+    "id": "pm-awas-yojana",
+    "name": "Pradhan Mantri Awas Yojana (PMAY - Gramin & Urban)",
+    "hindiName": "प्रधानमंत्री आवास योजना",
+    "category": "Housing",
+    "ministry": "Ministry of Housing and Urban Affairs & Ministry of Rural Development",
+    "targetGroup": "Homeless families or families living in kutcha/dilapidated houses",
+    "benefit": "Financial assistance of ₹1.20 Lakh (plains) to ₹1.30 Lakh (hilly states) in rural areas; interest subsidy up to ₹2.67 Lakh under CLSS in urban areas.",
+    "eligibility": {
+      "minAge": 21,
+      "maxAge": 70,
+      "gender": "Any (Preference to female ownership or co-ownership)",
+      "occupation": "Any",
+      "maxIncomeAnnual": 300000,
+      "state": "All India",
+      "criteria": "Family must not own a pucca house anywhere in India."
+    },
+    "documentsRequired": [
+      "Aadhaar Card of all family members",
+      "Bank Account passbook linked to Aadhaar",
+      "Income Certificate / BPL Certificate / SECC TIN number",
+      "Affidavit of not owning a pucca house",
+      "Land ownership document (for construction on own plot)"
+    ],
+    "applicationProcess": [
+      "For Gramin: Gram Sabha finalizes eligible list; registration done by Block Development Officer / Panchayat Secretary.",
+      "For Urban: Apply online at pmaymis.gov.in under 'Citizen Assessment' or through local municipal corporation / CSC center.",
+      "Geo-tagging of construction phases is conducted before installment disbursements."
+    ],
+    "officialUrl": "https://pmaymis.gov.in",
+    "helpline": "1800-11-6163 (Urban) / 1800-11-6446 (Gramin)",
+    "tags": ["housing", "house", "makan", "pucca", "awas", "home loan", "subsidy"]
+  },
+  {
+    "id": "sukanya-samriddhi",
+    "name": "Sukanya Samriddhi Yojana (SSY)",
+    "hindiName": "सुकन्या समृद्धि योजना",
+    "category": "Women & Child",
+    "ministry": "Ministry of Finance (Beti Bachao Beti Padhao initiative)",
+    "targetGroup": "Parents / Legal Guardians of girl children",
+    "benefit": "High sovereign-backed interest rate (typically 8.2% p.a.), tax exemptions under 80C, and tax-free maturity value for higher education and marriage.",
+    "eligibility": {
+      "minAge": 0,
+      "maxAge": 10,
+      "gender": "Female (Child)",
+      "occupation": "Any",
+      "maxIncomeAnnual": 99999999,
+      "state": "All India",
+      "criteria": "Account opened before child attains 10 years of age. Max 2 accounts per family (exceptions for twins/triplets)."
+    },
+    "documentsRequired": [
+      "Birth Certificate of girl child",
+      "Aadhaar Card & PAN Card of Parent/Guardian",
+      "Address proof of Parent/Guardian",
+      "Passport size photographs"
+    ],
+    "applicationProcess": [
+      "Visit any Post Office or authorized commercial bank branch.",
+      "Fill the SSY Account Opening Form (Form-1).",
+      "Deposit initial minimum amount of ₹250 (up to ₹1.5 Lakh per financial year).",
+      "Receive passbook for the account."
+    ],
+    "officialUrl": "https://www.indiapost.gov.in",
+    "helpline": "1800-266-6868",
+    "tags": ["girl", "child", "beti", "education", "savings", "tax-free", "sukanya"]
+  },
+  {
+    "id": "pm-mudra-yojana",
+    "name": "Pradhan Mantri MUDRA Yojana (PMMY)",
+    "hindiName": "प्रधानमंत्री मुद्रा योजना",
+    "category": "Business & Livelihood",
+    "ministry": "Ministry of Finance",
+    "targetGroup": "Micro-entrepreneurs, small shopkeepers, artisans, small business owners",
+    "benefit": "Collateral-free business loans: Shishu (up to ₹50,000), Kishore (₹50,001 to ₹5 Lakh), Tarun (₹5 Lakh to ₹10 Lakh), and Tarun Plus (up to ₹20 Lakh).",
+    "eligibility": {
+      "minAge": 18,
+      "maxAge": 65,
+      "gender": "Any",
+      "occupation": "Self-Employed / Business",
+      "maxIncomeAnnual": 99999999,
+      "state": "All India",
+      "criteria": "Non-corporate, non-farm small/micro enterprises."
+    },
+    "documentsRequired": [
+      "Identity Proof (Aadhaar / Voter ID / Passport)",
+      "Business Address Proof & Registration / Udyam Certificate",
+      "Bank statements of last 6 months",
+      "Quotation / Machinery invoices / Business proposal",
+      "Category certificates (SC/ST/OBC if applicable)"
+    ],
+    "applicationProcess": [
+      "Apply online via UdyamiMitra portal (udyamimitra.in) or visit any commercial / rural bank.",
+      "Submit application with project proposal and required documents.",
+      "Bank sanctions collateral-free loan based on viability."
+    ],
+    "officialUrl": "https://www.mudra.org.in",
+    "helpline": "1800-180-1111",
+    "tags": ["business", "loan", "startup", "dukan", "mudra", "vyapar", "collateral-free"]
+  },
+  {
+    "id": "atal-pension",
+    "name": "Atal Pension Yojana (APY)",
+    "hindiName": "अटल पेंशन योजना",
+    "category": "Social Security",
+    "ministry": "Ministry of Finance / PFRDA",
+    "targetGroup": "Unorganized sector workers",
+    "benefit": "Guaranteed monthly pension between ₹1,000 to ₹5,000 upon reaching 60 years of age, depending on contribution amount and age of joining.",
+    "eligibility": {
+      "minAge": 18,
+      "maxAge": 40,
+      "gender": "Any",
+      "occupation": "Unorganized Worker / Any",
+      "maxIncomeAnnual": 99999999,
+      "state": "All India",
+      "criteria": "Indian citizen aged 18 to 40 years holding a savings bank account. Must not be an income taxpayer."
+    },
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Savings Bank Account with Auto-Debit mandate",
+      "Mobile number registered with bank",
+      "Nominee details"
+    ],
+    "applicationProcess": [
+      "Approach your bank branch where savings account is maintained.",
+      "Submit APY registration form with auto-debit consent.",
+      "Receive PRAN (Permanent Retirement Account Number) card confirmation."
+    ],
+    "officialUrl": "https://www.npscra.nsdl.co.in",
+    "helpline": "1800-110-069",
+    "tags": ["pension", "old age", "social security", "retirement", "vriddha", "apy"]
+  },
+  {
+    "id": "pm-vishwakarma",
+    "name": "PM Vishwakarma Scheme",
+    "hindiName": "पीएम विश्वकर्मा योजना",
+    "category": "Artisans & Crafts",
+    "ministry": "Ministry of Micro, Small and Medium Enterprises (MSME)",
+    "targetGroup": "Traditional artisans and craftspeople (carpenters, blacksmiths, potters, cobblers, tailors, etc.)",
+    "benefit": "PM Vishwakarma Certificate & ID card, skill training with ₹500/day stipend, ₹15,000 toolkit incentive, and collateral-free enterprise credit up to ₹3 Lakh at 5% concessional interest rate.",
+    "eligibility": {
+      "minAge": 18,
+      "maxAge": 100,
+      "gender": "Any",
+      "occupation": "Artisan / Craftsman",
+      "maxIncomeAnnual": 99999999,
+      "state": "All India",
+      "criteria": "Individual working with hands and tools in one of 18 designated family-based traditional trades."
+    },
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Bank Account details",
+      "Ration Card",
+      "Active Mobile number linked to Aadhaar"
+    ],
+    "applicationProcess": [
+      "Register at nearest Common Services Centre (CSC) with biometric authentication.",
+      "Three-tier verification (Gram Panchayat / ULB, District Screening, Screening Committee).",
+      "Attend basic training and receive toolkit voucher and loan eligibility."
+    ],
+    "officialUrl": "https://pmvishwakarma.gov.in",
+    "helpline": "1800-267-7777",
+    "tags": ["artisan", "karigar", "carpenter", "blacksmith", "tailor", "vishwakarma", "loan"]
+  },
+  {
+    "id": "pm-svanidhi",
+    "name": "PM Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi)",
+    "hindiName": "पीएम स्वनिधि योजना",
+    "category": "Street Vendors & Urban Livelihood",
+    "ministry": "Ministry of Housing and Urban Affairs",
+    "targetGroup": "Urban street vendors and hawkers",
+    "benefit": "Working capital loan starting at ₹10,000 (1st tranche), ₹20,000 (2nd tranche), up to ₹50,000 (3rd tranche) with 7% interest subsidy and cashback on digital transactions.",
+    "eligibility": {
+      "minAge": 18,
+      "maxAge": 75,
+      "gender": "Any",
+      "occupation": "Street Vendor / Hawker",
+      "maxIncomeAnnual": 99999999,
+      "state": "All India",
+      "criteria": "Vendors possessing Certificate of Vending / ID card issued by Urban Local Bodies (ULBs) or Recommendation Letter."
+    },
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Vending Certificate / Identity Card / Letter of Recommendation from ULB/Town Vending Committee",
+      "Bank Account Passbook"
+    ],
+    "applicationProcess": [
+      "Apply through pmsvanidhi.mohua.gov.in or PM SVANidhi mobile app.",
+      "Can also apply via CSC or Banking Correspondent (BC).",
+      "Direct disbursement into bank account upon verification."
+    ],
+    "officialUrl": "https://pmsvanidhi.mohua.gov.in",
+    "helpline": "1800-11-1979",
+    "tags": ["vendor", "thela", "hawker", "street food", "svanidhi", "small loan"]
+  },
+  {
+    "id": "tele-law",
+    "name": "Tele-Law: Mainstreaming Legal Aid to the Marginalized",
+    "hindiName": "टेली-लॉ योजना (मुफ्त कानूनी सलाह)",
+    "category": "Legal Aid & Justice",
+    "ministry": "Ministry of Law and Justice & NALSA",
+    "targetGroup": "Women, children, SC/ST, victims of trafficking, disabled persons, and low-income citizens",
+    "benefit": "Free video/telephonic legal consultation with panel lawyers through Common Service Centers (CSCs) or Tele-Law mobile app.",
+    "eligibility": {
+      "minAge": 0,
+      "maxAge": 100,
+      "gender": "Any",
+      "occupation": "Any",
+      "maxIncomeAnnual": 300000,
+      "state": "All India",
+      "criteria": "Free for persons eligible under Section 12 of Legal Services Authorities Act (Women, Children, SC/ST, disabled, disaster victims, persons earning below state prescribed threshold)."
+    },
+    "documentsRequired": [
+      "Aadhaar Card or Photo ID",
+      "Income proof / Category proof (if seeking free advice under Section 12)"
+    ],
+    "applicationProcess": [
+      "Visit any Common Service Center (CSC) or download 'Tele-Law Beneficiary' app from Google Play Store.",
+      "Register details, select dispute category, and book appointment slot.",
+      "Receive consultation call/video from assigned panel lawyer from District Legal Services Authority (DLSA)."
+    ],
+    "officialUrl": "https://www.tele-law.in",
+    "helpline": "15100 / 14417",
+    "tags": ["legal aid", "lawyer", "free legal help", "tele-law", "court", "vakil", "nalsa"]
+  },
+  {
+    "id": "ladli-behna",
+    "name": "Mukhyamantri Mahila Kalyan / Ladli Behna Schemes (State Specific)",
+    "hindiName": "मुख्यमंत्री लाड़ली बहना / महिला कल्याण योजना",
+    "category": "Women Welfare",
+    "ministry": "State Departments of Women & Child Development (MP, MH, etc.)",
+    "targetGroup": "Married, widowed, divorced, and deserted women",
+    "benefit": "Direct monthly financial support (₹1,250 - ₹1,500/month) transferred directly to women's bank accounts.",
+    "eligibility": {
+      "minAge": 21,
+      "maxAge": 60,
+      "gender": "Female",
+      "occupation": "Any",
+      "maxIncomeAnnual": 250000,
+      "state": "State Specific (e.g. MP, Maharashtra Majhi Ladki Bahin)",
+      "criteria": "Resident of the state, family income less than ₹2.5 Lakh/year, not an income taxpayer or government employee."
+    },
+    "documentsRequired": [
+      "Samagra ID / Family State ID",
+      "Aadhaar Card with e-KYC completed",
+      "Individual Bank Account (Single, DBT & Aadhaar enabled)",
+      "Mobile number"
+    ],
+    "applicationProcess": [
+      "Camp-based application organized at Gram Panchayat or Ward level.",
+      "Biometric e-KYC and form verification.",
+      "Monthly DBT credit upon approval."
+    ],
+    "officialUrl": "https://cmladlibahna.mp.gov.in",
+    "helpline": "0755-2700800",
+    "tags": ["women", "mahila", "monthly money", "dbt", "ladli behna", "kalyan"]
+  }
+]

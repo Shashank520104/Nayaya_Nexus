@@ -1,0 +1,235 @@
+<%- include('partials/head', { title: 'Government Schemes & Eligibility Evaluator – NyayaNexus' }) %>
+<%- include('partials/navbar') %>
+
+<main class="schemes-page-main">
+  <!-- Top Hero Header -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-badge">
+        <i class="fa-solid fa-landmark"></i> Governance & Welfare Intelligence
+      </div>
+      <h1 class="page-title">Explore Indian Government Welfare Schemes</h1>
+      <p class="page-subtitle">
+        Access central and state beneficiary programs, verify your household's eligibility, prepare documentation checklists, and apply through legitimate official portals.
+      </p>
+
+      <!-- Action Row: Search & Eligibility Trigger -->
+      <div class="schemes-action-bar">
+        <!-- Search Form -->
+        <form action="/schemes" method="GET" class="schemes-search-form">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input 
+            type="text" 
+            name="search" 
+            id="schemeSearchInput"
+            value="<%= searchQuery %>" 
+            placeholder="Search schemes (e.g. Kisan, Ayushman, Housing, Mudra loan, Pension)..."
+          >
+          <% if (selectedCategory && selectedCategory !== 'All') { %>
+            <input type="hidden" name="category" value="<%= selectedCategory %>">
+          <% } %>
+          <button type="submit" class="btn-search">Search</button>
+        </form>
+
+        <!-- Eligibility Checker Modal Trigger -->
+        <button type="button" class="btn-eligibility-modal" id="openEligibilityModalBtn">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Check My Eligibility</span>
+        </button>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="category-pills">
+        <% categories.forEach(cat => { %>
+          <a 
+            href="/schemes?category=<%= encodeURIComponent(cat) %><%= searchQuery ? '&search=' + encodeURIComponent(searchQuery) : '' %>" 
+            class="cat-pill <%= selectedCategory.toLowerCase() === cat.toLowerCase() ? 'active' : '' %>"
+          >
+            <%= cat %>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schemes Directory Grid -->
+  <section class="section schemes-directory-section">
+    <div class="container">
+      <div class="schemes-count-header">
+        <h2>Showing <%= schemes.length %> Welfare Schemes</h2>
+        <% if (selectedCategory !== 'All' || searchQuery) { %>
+          <a href="/schemes" class="clear-filters-link">
+            <i class="fa-solid fa-xmark"></i> Clear Filters
+          </a>
+        <% } %>
+      </div>
+
+      <div class="schemes-grid">
+        <% schemes.forEach(scheme => { %>
+          <div class="scheme-card" id="<%= scheme.id %>">
+            <div class="scheme-card-header">
+              <span class="scheme-category-badge"><%= scheme.category %></span>
+              <span class="scheme-target"><%= scheme.targetGroup %></span>
+            </div>
+
+            <div class="scheme-title-group">
+              <h3 class="scheme-name"><%= scheme.name %></h3>
+              <% if (scheme.hindiName) { %>
+                <h4 class="scheme-hindi-name"><%= scheme.hindiName %></h4>
+              <% } %>
+              <span class="scheme-ministry"><i class="fa-solid fa-building-columns"></i> <%= scheme.ministry %></span>
+            </div>
+
+            <div class="scheme-benefit-box">
+              <div class="benefit-label"><i class="fa-solid fa-coins"></i> Core Financial Benefit:</div>
+              <p class="benefit-text"><%= scheme.benefit %></p>
+            </div>
+
+            <div class="scheme-details-collapse">
+              <!-- Eligibility Brief -->
+              <div class="detail-block">
+                <h5><i class="fa-solid fa-clipboard-check"></i> Eligibility Checklist:</h5>
+                <ul class="mini-checklist">
+                  <li><strong>Age Bracket:</strong> <%= scheme.eligibility.minAge %> to <%= scheme.eligibility.maxAge %> years</li>
+                  <% if (scheme.eligibility.maxIncomeAnnual && scheme.eligibility.maxIncomeAnnual < 9000000) { %>
+                    <li><strong>Annual Income:</strong> Up to ₹<%= scheme.eligibility.maxIncomeAnnual.toLocaleString('en-IN') %></li>
+                  <% } %>
+                  <% if (scheme.eligibility.criteria) { %>
+                    <li><strong>Criteria:</strong> <%= scheme.eligibility.criteria %></li>
+                  <% } %>
+                  <% if (scheme.eligibility.landHolding) { %>
+                    <li><strong>Land:</strong> <%= scheme.eligibility.landHolding %></li>
+                  <% } %>
+                </ul>
+              </div>
+
+              <!-- Required Docs -->
+              <div class="detail-block">
+                <h5><i class="fa-solid fa-file-invoice"></i> Mandatory Documents:</h5>
+                <ul class="docs-checklist">
+                  <% scheme.documentsRequired.forEach(doc => { %>
+                    <li><i class="fa-solid fa-check"></i> <%= doc %></li>
+                  <% }) %>
+                </ul>
+              </div>
+            </div>
+
+            <div class="scheme-card-footer">
+              <a href="<%= scheme.officialUrl %>" target="_blank" rel="noopener noreferrer" class="btn-portal">
+                <span>Official Portal</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+              <a href="/chat?q=Tell me full details and how to apply for <%= encodeURIComponent(scheme.name) %>" class="btn-ask-scheme" title="Ask AI Assistant about this scheme">
+                <i class="fa-solid fa-comments"></i> <span>Ask AI</span>
+              </a>
+
+              <% if (scheme.helpline) { %>
+                <a href="tel:<%= scheme.helpline.split('/')[0].trim() %>" class="scheme-helpline-link" title="Call Scheme Helpline">
+                  <i class="fa-solid fa-phone"></i> <%= scheme.helpline.split('/')[0].trim() %>
+                </a>
+              <% } %>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Eligibility Checker Modal -->
+  <div class="modal-backdrop" id="eligibilityModal" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h3>Citizen Scheme Eligibility Evaluator</h3>
+        </div>
+        <button type="button" class="btn-close-modal" id="closeEligibilityModalBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-subtitle">
+          Enter your demographic details to evaluate your household's eligibility across all central & state schemes simultaneously.
+        </p>
+
+        <form id="eligibilityForm" class="eligibility-form">
+          <div class="form-row">
+            <div class="form-group col-half">
+              <label for="evalAge">Your Age (Years) *</label>
+              <input type="number" id="evalAge" name="age" min="1" max="100" placeholder="e.g. 35" required>
+            </div>
+            <div class="form-group col-half">
+              <label for="evalIncome">Annual Household Income (₹) *</label>
+              <input type="number" id="evalIncome" name="income" min="0" placeholder="e.g. 180000" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-half">
+              <label for="evalGender">Gender</label>
+              <select id="evalGender" name="gender">
+                <option value="Any">Any / Other</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+              </select>
+            </div>
+
+            <div class="form-group col-half">
+              <label for="evalOccupation">Primary Occupation</label>
+              <select id="evalOccupation" name="occupation">
+                <option value="Any">General Citizen / Any</option>
+                <option value="Farmer">Farmer (Landholder)</option>
+                <option value="Street Vendor">Street Vendor / Hawker</option>
+                <option value="Artisan">Artisan / Traditional Craftsman</option>
+                <option value="Self-Employed">Self-Employed / Micro Business</option>
+                <option value="Unorganized Worker">Unorganized / Daily Wage Worker</option>
+                <option value="Student">Student</option>
+                <option value="Homemaker">Homemaker</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="evalState">State of Residence</label>
+            <select id="evalState" name="state">
+              <option value="All India">All India / Central</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Bihar">Bihar</option>
+              <option value="West Bengal">West Bengal</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Other">Other State / UT</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-primary btn-block" id="evaluateSubmitBtn">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <span>Evaluate Eligible Schemes</span>
+          </button>
+        </form>
+
+        <!-- Results Display Box -->
+        <div class="eval-results-container" id="evalResultsBox" style="display: none;">
+          <div class="eval-results-header">
+            <h4><i class="fa-solid fa-square-check"></i> Eligibility Evaluation Report</h4>
+            <span class="eval-summary-badge" id="evalMatchCount">0 Schemes Matched</span>
+          </div>
+
+          <div class="eval-cards-list" id="evalCardsList">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/js/schemes.js"></script>
+
+<%- include('partials/footer') %>

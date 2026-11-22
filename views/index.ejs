@@ -1,0 +1,250 @@
+<%- include('partials/head', { title: 'NyayaNexus – Multilingual Governance & Legal Assistance' }) %>
+<%- include('partials/navbar') %>
+
+<main class="landing-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <i class="fa-solid fa-sparkles"></i>
+        <span>Designed & Developed by Shashank, Shubh & Ashutosh</span>
+      </div>
+
+      <h1 class="hero-title">
+        Democratizing Legal Rights & Welfare Schemes for <span>Every Citizen</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        NyayaNexus is an intelligent, multilingual legal assistant powered by contextual prompt engineering. We translate complex legal statutes (BNS 2023, BNSS, Consumer Act) and government schemes into simple, actionable steps in your mother tongue.
+      </p>
+
+      <!-- Interactive Quick Search / Chat Starter -->
+      <div class="hero-search-box">
+        <form action="/chat" method="GET" class="hero-query-form">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input 
+            type="text" 
+            name="q" 
+            id="heroQueryInput"
+            placeholder="Ask anything (e.g. पुलिस FIR दर्ज न करे तो क्या करें? or How to get PM Kisan ₹6000?)"
+            required
+            autocomplete="off"
+          >
+          <button type="submit" class="btn-primary hero-submit-btn">
+            <span>Ask Nyaya</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <!-- Quick Query Suggestion Chips -->
+        <div class="hero-chips">
+          <span class="chips-label"><i class="fa-solid fa-bolt"></i> Popular Queries:</span>
+          <a href="/chat?q=पुलिस+एफआईआर+दर्ज+करने+से+मना+करे+तो+जीरो+एफआईआर+कैसे+लिखें&lang=hi" class="chip">
+            <span class="chip-lang">हिन्दी</span> Zero FIR Rights
+          </a>
+          <a href="/chat?q=I+lost+money+in+an+online+UPI+fraud+20+minutes+ago.+How+to+call+1930+golden+hour&lang=en" class="chip cyber-chip">
+            <span class="chip-lang">English</span> UPI Fraud 1930 Golden Hour
+          </a>
+          <a href="/chat?q=प्रधानमंत्री+किसान+सम्मान+निधि+की+पात्रता+और+e-KYC+नियम&lang=hi" class="chip">
+            <span class="chip-lang">हिन्दी</span> PM Kisan ₹6,000 e-KYC
+          </a>
+          <a href="/chat?q=How+to+file+consumer+complaint+on+eDaakhil+for+defective+product+without+lawyer&lang=en" class="chip">
+            <span class="chip-lang">English</span> e-Daakhil Consumer Court
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="hero-metrics">
+        <div class="metric-item">
+          <span class="metric-num">9+</span>
+          <span class="metric-label">Indian Languages Supported</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-num">BNS 2023</span>
+          <span class="metric-label">Aligned to New Criminal Laws</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-num">25+</span>
+          <span class="metric-label">Central & State Welfare Schemes</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-num">Zero</span>
+          <span class="metric-label">Legal Jargon: Plain Language</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars Grid -->
+  <section class="section features-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Core Capabilities</span>
+        <h2 class="section-title">Built for Real Citizen Empowerment</h2>
+        <p class="section-desc">
+          Architecture designed from the ground up to solve legal illiteracy, bureaucratic delays, and AI hallucination in legal matters.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <div class="feature-card">
+          <div class="feature-icon icon-chat">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="feature-title">Multilingual Legal Chatbot</h3>
+          <p class="feature-desc">
+            Ask in Hindi, Bengali, Telugu, Tamil, Marathi, Gujarati, Kannada, Punjabi, or Hinglish. Equipped with speech-to-text voice recognition and audio playback.
+          </p>
+          <a href="/chat" class="feature-link">
+            <span>Start Chatting</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card">
+          <div class="feature-icon icon-schemes">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="feature-title">Scheme Eligibility Evaluator</h3>
+          <p class="feature-desc">
+            Enter your age, income, state, and occupation. Our rule engine matches you with schemes like PM-Kisan, Ayushman Bharat, PMAY, and MUDRA loans with direct application portals.
+          </p>
+          <a href="/schemes" class="feature-link">
+            <span>Find Schemes</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card">
+          <div class="feature-icon icon-legal">
+            <i class="fa-solid fa-book-journal-whills"></i>
+          </div>
+          <h3 class="feature-title">BNS 2023 vs IPC Explorer</h3>
+          <p class="feature-desc">
+            Seamlessly navigate India's transition to Bharatiya Nyaya Sanhita (BNS) and Bharatiya Nagarik Suraksha Sanhita (BNSS). Understand Zero FIR and arrest safeguards under Article 22.
+          </p>
+          <a href="/legal" class="feature-link">
+            <span>Explore Statutes</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="feature-card">
+          <div class="feature-icon icon-drafts">
+            <i class="fa-solid fa-file-contract"></i>
+          </div>
+          <h3 class="feature-title">Instant RTI & Notice Generator</h3>
+          <p class="feature-desc">
+            Generate formal Section 6(1) RTI applications, 15-day Consumer legal notices, and Police incident complaints in 2 minutes. Ready to download, print, or copy.
+          </p>
+          <a href="/drafts" class="feature-link">
+            <span>Create Draft</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="feature-card card-spotlight">
+          <div class="feature-icon icon-studio">
+            <i class="fa-solid fa-microscope"></i>
+          </div>
+          <div class="spotlight-tag">Core Technical Contribution</div>
+          <h3 class="feature-title">Prompt Engineering Studio</h3>
+          <p class="feature-desc">
+            Inspect how our layered system prompts, anti-hallucination guardrails, and statutory context injection minimize inaccuracies and ensure Bar Council compliance.
+          </p>
+          <a href="/prompt-studio" class="feature-link">
+            <span>Inspect Prompts</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="feature-card">
+          <div class="feature-icon icon-helplines">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3 class="feature-title">24x7 Statutory Helplines</h3>
+          <p class="feature-desc">
+            Direct one-tap links to NALSA (15100) for free legal aid, National Cybercrime (1930) for golden hour freezes, Consumer Helpline (1915), and Emergency 112.
+          </p>
+          <a href="/legal#helplines" class="feature-link">
+            <span>View Helplines</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prompt Engineering Innovation Highlight -->
+  <section class="section prompt-spotlight-section">
+    <div class="container">
+      <div class="spotlight-box">
+        <div class="spotlight-header">
+          <div class="spotlight-meta">
+            <span class="spotlight-pill"><i class="fa-solid fa-brain"></i> Project Research Focus</span>
+            <h2>Solving AI Hallucinations in Indian Legal Guidance</h2>
+          </div>
+          <a href="/prompt-studio" class="btn-outline-light">
+            <span>Explore Prompt Studio</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="spotlight-grid">
+          <div class="spotlight-step">
+            <div class="step-num">01</div>
+            <h4>Multilingual Normalization</h4>
+            <p>Heuristic script detection normalizes colloquial Hindi, Bengali, Tamil, and Hinglish queries into grounded intent vectors.</p>
+          </div>
+          <div class="spotlight-step">
+            <div class="step-num">02</div>
+            <h4>Statutory Context Injection</h4>
+            <p>Dynamically binds verified sections of BNS 2023, BNSS, and Consumer Protection Act 2019 to eliminate fictional section numbers.</p>
+          </div>
+          <div class="spotlight-step">
+            <div class="step-num">03</div>
+            <h4>Guardrails & Anti-Hallucination</h4>
+            <p>Enforces Bar Council Rule 36 disclaimers, golden-hour cyber protocols, and mandatory NALSA 15100 free counsel referrals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Team Showcase Banner -->
+  <section class="section team-banner-section">
+    <div class="container text-center">
+      <span class="section-tag">Project Collaborators</span>
+      <h2 class="section-title">Developed Collaboratively by Team of Three</h2>
+      <p class="section-desc">
+        Engineered with clean MVC separation of concerns, structured data models, and an empathetic citizen-centric interface.
+      </p>
+
+      <div class="team-cards-row">
+        <% team.forEach(member => { %>
+          <div class="team-member-card">
+            <div class="member-avatar">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <h3 class="member-name"><%= member.name %></h3>
+            <span class="member-role"><%= member.role %></span>
+            <p class="member-focus"><%= member.focus %></p>
+          </div>
+        <% }) %>
+      </div>
+
+      <div class="team-action-wrap">
+        <a href="/team" class="btn-secondary">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>View Architecture & Project Breakdown</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

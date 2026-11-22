@@ -1,0 +1,188 @@
+<%- include('partials/head', { title: 'Citizen Legal Rights & BNS/IPC Explorer – NyayaNexus' }) %>
+<%- include('partials/navbar') %>
+
+<main class="legal-page-main">
+  <!-- Top Hero Header -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-badge">
+        <i class="fa-solid fa-scale-balanced"></i> Statutory Awareness & Criminal Justice
+      </div>
+      <h1 class="page-title">Citizen Legal Rights & BNS 2023 Explorer</h1>
+      <p class="page-subtitle">
+        Demystifying Indian criminal justice laws, Bharatiya Nyaya Sanhita (BNS), arrest protections, Zero FIR protocols, and 24x7 statutory helplines.
+      </p>
+
+      <!-- Quick Search Bar -->
+      <div class="legal-search-wrapper">
+        <form action="/legal" method="GET" class="legal-search-form">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input 
+            type="text" 
+            name="q" 
+            value="<%= searchQuery %>" 
+            placeholder="Search rights (e.g. Zero FIR, BNS 318 cheating, arrest of women, RTI appeal, cheque bounce)..."
+          >
+          <button type="submit" class="btn-search">Search Rights</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Anchors Strip -->
+  <div class="container anchor-nav-strip">
+    <a href="#bns-transition" class="anchor-link"><i class="fa-solid fa-arrows-split-up-and-left"></i> BNS vs IPC Mapping</a>
+    <a href="#citizen-rights" class="anchor-link"><i class="fa-solid fa-shield-halved"></i> Essential Citizen Rights</a>
+    <a href="#helplines" class="anchor-link"><i class="fa-solid fa-phone-volume"></i> Verified Helplines</a>
+  </div>
+
+  <!-- BNS vs IPC Side-by-Side Transition Table -->
+  <section class="section bns-transition-section" id="bns-transition">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">New Criminal Law Reforms</span>
+        <h2 class="section-title">Bharatiya Nyaya Sanhita (BNS 2023) vs IPC 1860</h2>
+        <p class="section-desc">
+          On July 1, 2024, India transitioned from the colonial Indian Penal Code (IPC) and CrPC to the Bharatiya Nyaya Sanhita (BNS) and Bharatiya Nagarik Suraksha Sanhita (BNSS). Here is the verified side-by-side mapping for common everyday offenses:
+        </p>
+      </div>
+
+      <div class="table-responsive-wrapper">
+        <table class="bns-table">
+          <thead>
+            <tr>
+              <th>Legal Concept / Offense</th>
+              <th>New BNS / BNSS Section</th>
+              <th>Old IPC / CrPC Section</th>
+              <th>Statutory Impact & Citizen Meaning</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% bnsMappings.forEach(mapping => { %>
+              <tr>
+                <td class="col-title">
+                  <strong><%= mapping.title %></strong>
+                  <span class="category-sub"><%= mapping.category %></span>
+                </td>
+                <td class="col-bns">
+                  <span class="statute-badge bns-badge"><%= mapping.bnsSection %></span>
+                </td>
+                <td class="col-ipc">
+                  <span class="statute-badge ipc-badge"><%= mapping.ipcSection %></span>
+                </td>
+                <td class="col-summary">
+                  <%= mapping.summary %>
+                </td>
+                <td class="col-action">
+                  <a href="/chat?q=Explain in simple terms: <%= encodeURIComponent(mapping.title) %> under <%= encodeURIComponent(mapping.bnsSection) %>" class="btn-mini-chat">
+                    <i class="fa-solid fa-comments"></i> <span>Ask AI</span>
+                  </a>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citizen Everyday Rights Breakdown -->
+  <section class="section citizen-rights-section" id="citizen-rights">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Empowerment Guides</span>
+        <h2 class="section-title">Know Your Constitutional & Statutory Rights</h2>
+        <p class="section-desc">
+          Practical knowledge designed to protect ordinary citizens against harassment, arbitrary detention, and denial of public services.
+        </p>
+      </div>
+
+      <div class="rights-cards-grid">
+        <% legalItems.forEach(item => { %>
+          <div class="rights-card">
+            <div class="rights-card-header">
+              <span class="rights-cat"><%= item.category %></span>
+              <div class="statute-pill-row">
+                <span class="badge-bns"><%= item.bnsSection %></span>
+              </div>
+            </div>
+
+            <h3 class="rights-card-title"><%= item.title %></h3>
+            <p class="rights-summary"><%= item.summary %></p>
+
+            <div class="rights-checklist-box">
+              <h4><i class="fa-solid fa-list-check"></i> Key Statutory Protections:</h4>
+              <ul class="rights-bullets">
+                <% item.keyRights.forEach(r => { %>
+                  <li><i class="fa-solid fa-check"></i> <%= r %></li>
+                <% }) %>
+              </ul>
+            </div>
+
+            <div class="rights-card-footer">
+              <div class="plain-lang-tip">
+                <i class="fa-solid fa-lightbulb"></i>
+                <p><%= item.simplifiedExplanation %></p>
+              </div>
+
+              <div class="rights-cta-row">
+                <a href="/chat?q=Explain in depth my legal rights regarding: <%= encodeURIComponent(item.title) %>" class="btn-primary-sm">
+                  <i class="fa-solid fa-comments"></i> Consult Assistant
+                </a>
+                <% if (item.helpline) { %>
+                  <span class="helpline-hint"><i class="fa-solid fa-phone"></i> <%= item.helpline %></span>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency & Statutory Helplines Directory -->
+  <section class="section helplines-section" id="helplines">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">24x7 Toll-Free Access</span>
+        <h2 class="section-title">Statutory Indian Emergency Helplines</h2>
+        <p class="section-desc">
+          Authorized government helplines for immediate police response, cyber fraud fund freezing, free legal aid, and consumer disputes.
+        </p>
+      </div>
+
+      <div class="helplines-grid">
+        <% helplines.forEach(hl => { %>
+          <div class="helpline-card <%= hl.number === '1930' ? 'featured-cyber' : '' %>">
+            <div class="hl-badge-row">
+              <span class="hl-category"><%= hl.category %></span>
+              <span class="hl-timing"><i class="fa-solid fa-clock"></i> <%= hl.timing %></span>
+            </div>
+
+            <div class="hl-number-box">
+              <a href="tel:<%= hl.number.split('/')[0].trim() %>" class="hl-big-number">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span><%= hl.number %></span>
+              </a>
+            </div>
+
+            <h3 class="hl-name"><%= hl.name %></h3>
+            <p class="hl-desc"><%= hl.description %></p>
+
+            <div class="hl-footer">
+              <span class="hl-coverage"><i class="fa-solid fa-map-location-dot"></i> <%= hl.coverage %></span>
+              <% if (hl.portal) { %>
+                <a href="<%= hl.portal %>" target="_blank" rel="noopener noreferrer" class="hl-portal-link">
+                  <span>Portal</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              <% } %>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
