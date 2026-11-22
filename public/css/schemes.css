@@ -768,6 +768,29 @@
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-sample-data {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.btn-sample-data:hover {
+  background-color: var(--accent);
+  color: #FFFFFF;
 }
 
 .header-icon-title {
@@ -863,5 +886,83 @@
 @media (max-width: 900px) {
   .draft-workspace-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .category-pills, .anchor-nav-strip, .draft-tabs-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.5rem 0.25rem 0.75rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+  .category-pills::-webkit-scrollbar,
+  .anchor-nav-strip::-webkit-scrollbar,
+  .draft-tabs-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .cat-pill, .anchor-link, .draft-tab {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .schemes-grid, .rights-cards-grid, .helplines-grid {
+    grid-template-columns: 1fr;
+  }
+  .schemes-action-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .schemes-search-form {
+    min-width: 100%;
+  }
+  .btn-eligibility-modal {
+    width: 100%;
+    justify-content: center;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .modal-backdrop {
+    padding: 0.5rem;
+  }
+  .modal-dialog {
+    max-height: 96vh;
+    border-radius: var(--radius-md);
+  }
+  .modal-body {
+    padding: 1rem;
+  }
+  .draft-form-card, .draft-preview-card {
+    padding: 1.25rem;
+  }
+  .preview-body {
+    padding: 1rem;
+    min-height: 360px;
+  }
+  .preview-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .preview-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .btn-preview-action {
+    flex: 1;
+    justify-content: center;
+    padding: 0.45rem;
+  }
+  .table-responsive-wrapper {
+    border-radius: var(--radius-md);
+  }
+  .bns-table th, .bns-table td {
+    padding: 0.75rem 0.85rem;
   }
 }

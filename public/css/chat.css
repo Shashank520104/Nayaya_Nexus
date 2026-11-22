@@ -637,11 +637,88 @@
 
 @media (max-width: 900px) {
   .prompt-inspector-drawer {
-    position: absolute;
-    right: 1.5rem;
+    position: fixed;
+    right: 0;
     top: 0;
     bottom: 0;
-    z-index: 100;
-    width: calc(100% - 3rem);
+    z-index: 2500;
+    width: 88%;
+    max-width: 380px;
+    height: 100vh;
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.35);
+    background-color: var(--bg-surface);
+  }
+}
+
+@media (max-width: 640px) {
+  .chat-page-main {
+    padding: 0.5rem 0 0.75rem;
+  }
+  .chat-layout {
+    padding: 0 0.5rem;
+  }
+  .chat-container-card {
+    height: calc(100vh - 5.5rem);
+    height: calc(100dvh - 5.5rem);
+    min-height: 480px;
+    border-radius: var(--radius-md);
+  }
+  .chat-card-header {
+    padding: 0.65rem 0.85rem;
+  }
+  .assistant-avatar {
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 0.95rem;
+  }
+  .assistant-name {
+    font-size: 0.88rem;
+  }
+  .assistant-subtitle {
+    font-size: 0.68rem;
+  }
+  .chat-toolbar {
+    gap: 0.35rem;
+  }
+  .chat-select {
+    padding: 0.3rem 0.45rem;
+    font-size: 0.75rem;
+    max-width: 95px;
+  }
+  .btn-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+  .chat-messages {
+    padding: 1rem 0.75rem;
+    gap: 1rem;
+  }
+  .message {
+    max-width: 96%;
+    gap: 0.6rem;
+  }
+  .message-avatar {
+    width: 1.9rem;
+    height: 1.9rem;
+    font-size: 0.82rem;
+  }
+  .message-body {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.9rem;
+  }
+  .chat-input-wrapper {
+    padding: 0.65rem 0.75rem;
+  }
+  .btn-voice {
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 0.9rem;
+  }
+  .btn-send {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 0.85rem;
   }
 }

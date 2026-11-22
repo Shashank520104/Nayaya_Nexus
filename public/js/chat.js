@@ -72,9 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Prompt Inspector Drawer Toggle
+  // Prompt Inspector Drawer Toggle & Close Handlers
   if (openInspectorBtn && promptInspectorDrawer) {
-    openInspectorBtn.addEventListener('click', () => {
+    openInspectorBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       promptInspectorDrawer.classList.toggle('open');
     });
   }
@@ -83,6 +84,21 @@ document.addEventListener('DOMContentLoaded', () => {
       promptInspectorDrawer.classList.remove('open');
     });
   }
+
+  // Close inspector on outside click or Escape key
+  document.addEventListener('click', (e) => {
+    if (promptInspectorDrawer && promptInspectorDrawer.classList.contains('open')) {
+      if (!promptInspectorDrawer.contains(e.target) && e.target !== openInspectorBtn && !openInspectorBtn.contains(e.target)) {
+        promptInspectorDrawer.classList.remove('open');
+      }
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && promptInspectorDrawer && promptInspectorDrawer.classList.contains('open')) {
+      promptInspectorDrawer.classList.remove('open');
+    }
+  });
 
   // Reset Chat
   if (clearChatBtn) {

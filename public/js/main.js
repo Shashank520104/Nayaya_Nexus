@@ -64,14 +64,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 3. Mobile Navigation Menu Toggle
+  // 3. Mobile Navigation Menu Toggle & Auto-Close
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const navMenu = document.getElementById('navMenu');
 
   if (hamburgerBtn && navMenu) {
-    hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       navMenu.classList.toggle('show');
       hamburgerBtn.classList.toggle('active');
+    });
+
+    // Close when clicking any nav link
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+        hamburgerBtn.classList.remove('active');
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        navMenu.classList.remove('show');
+        hamburgerBtn.classList.remove('active');
+      }
     });
   }
 });

@@ -513,5 +513,51 @@
 @media (max-width: 900px) {
   .comparison-cards-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .arch-pipeline-grid, .team-profiles-grid, .mvc-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-preset-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .preset-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+  .btn-preset {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .comp-card {
+    padding: 1.25rem;
+  }
+  .tester-form .form-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .tester-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .team-profile-card {
+    padding: 1.5rem;
+  }
+  .profile-card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  .profile-avatar-circle {
+    margin: 0 auto;
+  }
+  .code-viewer-body {
+    padding: 1rem;
+    font-size: 0.75rem;
   }
 }
